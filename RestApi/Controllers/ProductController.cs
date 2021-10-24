@@ -46,6 +46,7 @@ namespace RestApi.Controllers
 
         // POST api/<ProductController>
         [HttpPost]
+        [Consumes("application/xml")]
         public IActionResult Post(ProductForSave product)
         {
             if (ModelState.IsValid)
@@ -55,7 +56,17 @@ namespace RestApi.Controllers
             }
             return Ok();
         }
-
+        //[HttpPost]
+        //[Consumes("application/json")]
+        //public IActionResult Post(ProductForSave product)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        _dbContext.Products.Add(product.ToProduct());
+        //        _dbContext.SaveChanges();
+        //    }
+        //    return Ok();
+        //}
         // PUT api/<ProductController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)

@@ -1,0 +1,49 @@
+﻿@page "/parent"
+<h6>من پدر هستم</h6>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <p>والد</p>
+            <input type="text" @bind="_inputText" />
+            @if (_Childtext.Count() > 0)
+            {
+                foreach (var item in _Childtext)
+                {
+                    <p> @item</p>
+                    <hr />
+                }
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    <p>مقداری از فرزند ارسال نشده است</p>
+                </div>
+            }
+        </div>
+        <div class="col-lg-6">
+            <p>فرزند</p>
+            <Child childinputText="@_inputText" OutputChanged="GetChildText"></Child>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    public List<string> _Childtext = new List<string>();
+
+
+    public string _inputText { get; set; }
+
+    public void GetChildText(string text)
+    {
+        if (!string.IsNullOrEmpty(text))
+        {
+            _Childtext.Add(text);
+        }
+    }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        _inputText = "";
+    }
+
+}

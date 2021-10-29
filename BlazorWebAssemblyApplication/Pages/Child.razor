@@ -1,0 +1,43 @@
+﻿@page "/child"
+<h6>من فرزند هستم</h6>
+@if (_textList.Count() > 0)
+{
+    foreach (var item in _textList)
+    {
+        <p> @item</p>
+        <hr />
+    }
+}
+else
+{
+    <div class="alert alert-danger">
+        <p>مقداری از والد ارسال نشده است</p>
+    </div>
+}
+
+<hr />
+<input type="text" @bind="outputText" />
+<input type="button"  @onclick="SendDataToParent" />
+@code {
+    [Parameter]
+    public string childinputText { get; set; }
+    public List<string> _textList = new List<string>();
+
+    private string outputText;
+
+    [Parameter]
+    public EventCallback<string> OutputChanged { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        if (!string.IsNullOrEmpty(childinputText))
+        {
+            _textList.Add(childinputText);
+        }
+    }
+
+    public async Task SendDataToParent()
+    {
+        await OutputChanged.InvokeAsync(outputText);
+    }
+}

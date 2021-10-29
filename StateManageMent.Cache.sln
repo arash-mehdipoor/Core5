@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Routing", "Routing\Routing.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestApi", "RestApi\RestApi.csproj", "{6C5D82D1-55C4-41D7-88A1-AE9588116167}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{2DBBA972-AC47-454A-B87C-FD261CDAD797}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting", "UnitTesting\UnitTesting.csproj", "{2DBBA972-AC47-454A-B87C-FD261CDAD797}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C57848BE-C380-47E4-B309-C846FA325CFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{5AF147EA-39EF-4145-88DC-B856754FB3CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{5AF147EA-39EF-4145-88DC-B856754FB3CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyApplication", "BlazorWebAssemblyApplication\BlazorWebAssemblyApplication.csproj", "{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{5AF147EA-39EF-4145-88DC-B856754FB3CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AF147EA-39EF-4145-88DC-B856754FB3CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AF147EA-39EF-4145-88DC-B856754FB3CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

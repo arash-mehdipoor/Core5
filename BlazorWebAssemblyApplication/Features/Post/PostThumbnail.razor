@@ -1,0 +1,16 @@
+﻿
+
+<div class="card mb-3">
+    <div class="card-header">@Post.Title</div>
+    <div class="card-body">
+        @Post.Description
+    </div>
+    <div class="card-footer">
+        @Post.Url
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Post Post { get; set; }
+}

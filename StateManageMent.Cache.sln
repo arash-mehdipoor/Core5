@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject", "UnitTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApplication", "BlazorWebAssemblyApplication\BlazorWebAssemblyApplication.csproj", "{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientExample", "HttpClientExample\HttpClientExample.csproj", "{999D4899-4BDD-48FB-A4CD-559B436D918B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999D4899-4BDD-48FB-A4CD-559B436D918B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999D4899-4BDD-48FB-A4CD-559B436D918B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999D4899-4BDD-48FB-A4CD-559B436D918B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999D4899-4BDD-48FB-A4CD-559B436D918B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

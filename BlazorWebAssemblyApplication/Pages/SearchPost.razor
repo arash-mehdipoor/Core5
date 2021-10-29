@@ -1,0 +1,27 @@
+﻿@inject NavigationManager _navigationManager;
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header">
+                    <p>Search</p>
+                </div>
+                <div class="card-body">
+                    <input type="text" class="form-control" @bind="_searchTerm" @bind:event="oninput" @onkeydown="search" />
+                    <p>@_searchTerm</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    public string _searchTerm { get; set; }
+
+    public void search(KeyboardEventArgs args)
+    {
+        if (args.Code != "Enter")
+            return;
+        _navigationManager.NavigateTo($"/search/{_searchTerm}");
+    }
+}

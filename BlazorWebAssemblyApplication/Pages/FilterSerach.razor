@@ -1,0 +1,29 @@
+﻿@inject NavigationManager _navigationManager;
+
+<div class="container mb-5">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header">
+                    <p>Search Age</p>
+                </div>
+                <div class="card-body">
+                    <input type="text" @bind="@maxAge" class="form-control form-control-lg" />
+                    <button class="btn btn-success" @onclick="Filter">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private int? maxAge;
+
+    [Parameter]
+    public string searchTerm { get; set; }
+
+    public void Filter()
+    {
+        _navigationManager.NavigateTo($"/search/{searchTerm}/{maxAge}");
+        }
+}

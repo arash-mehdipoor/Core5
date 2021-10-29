@@ -1,0 +1,38 @@
+﻿@page "/search/{searchTerm}"
+@page "/search/{searchTerm}/{maxAge:int}"
+
+@inject HttpClient _httpClient;
+<FilterSerach searchTerm="@searchTerm"></FilterSerach>
+@if (_searchPost?.Any() == false)
+{
+    <div class="alert alert-danger">Null</div>
+}
+else
+{
+    <div class="row">
+        @foreach (var item in _searchPost)
+        {
+            <div class="col-4">
+                <PostThumbnail Post="item"></PostThumbnail>
+            </div>
+        }
+    </div>
+}
+@code {
+    [Parameter]
+    public string searchTerm { get; set; }
+    
+    [Parameter]
+    public int? maxAge { get; set; }
+    public List<Post> _allPost = new List<Post>();
+    public List<Post> _searchPost = new List<Post>();
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _allPost = await _httpClient.GetFromJsonAsync<List<Post>>("/sample-data/post.json");
+        _searchPost = _allPost.Where(c => c.Title.Contains(searchTerm) || c.Description.Contains(searchTerm)
+            && (!maxAge.HasValue || c.PublishDate >= DateTime.Now.AddYears(-maxAge.Value)))
+            .ToList();
+    }
+
+}

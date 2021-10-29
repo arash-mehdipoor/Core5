@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject", "UnitTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApplication", "BlazorWebAssemblyApplication\BlazorWebAssemblyApplication.csproj", "{9B7294DD-6B7A-4A0D-9497-DEF8F1A78FAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientExample", "HttpClientExample\HttpClientExample.csproj", "{999D4899-4BDD-48FB-A4CD-559B436D918B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpClientExample", "HttpClientExample\HttpClientExample.csproj", "{999D4899-4BDD-48FB-A4CD-559B436D918B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBindingExample", "ModelBindingExample\ModelBindingExample.csproj", "{5B219E9D-7CD4-4EC0-B861-0AAEC7BC0453}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{999D4899-4BDD-48FB-A4CD-559B436D918B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{999D4899-4BDD-48FB-A4CD-559B436D918B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{999D4899-4BDD-48FB-A4CD-559B436D918B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B219E9D-7CD4-4EC0-B861-0AAEC7BC0453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B219E9D-7CD4-4EC0-B861-0AAEC7BC0453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B219E9D-7CD4-4EC0-B861-0AAEC7BC0453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B219E9D-7CD4-4EC0-B861-0AAEC7BC0453}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

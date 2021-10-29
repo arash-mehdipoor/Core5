@@ -1,0 +1,10 @@
+﻿
+@model ModelBindingExample.Models.Product
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <form asp-action="AddProduct" asp-controller="Product">
+        <div class="form-group">
+            <input type="text" asp-for="Name" />
+            <input type="text" asp-for="Title" />
+        </div>
+        <input type="submit" value="AddProduct" class="btn btn-success" />
+    </form>
